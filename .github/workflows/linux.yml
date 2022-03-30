@@ -36,6 +36,10 @@ jobs:
             option: gcc11
             compiler_c: gcc-11
             compiler_cxx: g++-11
+          - build_type: Release
+            option: gcc11
+            compiler_c: gcc-11
+            compiler_cxx: g++-11
           - build_type: Debug
             option: gcc11
             compiler_c: gcc-11
