@@ -39,7 +39,12 @@ namespace math {
 
 // Declares a 2d float vector.
 struct OZZ_BASE_DLL Float2 {
-  float x, y;
+  union {
+    struct {
+      float x, y;
+    };
+    float values[2];
+  };
 
   // Constructs an uninitialized vector.
   OZZ_INLINE Float2() {}
@@ -65,7 +70,12 @@ struct OZZ_BASE_DLL Float2 {
 
 // Declares a 3d float vector.
 struct OZZ_BASE_DLL Float3 {
-  float x, y, z;
+  union {
+    struct {
+      float x, y, z;
+    };
+    float values[3];
+  };
 
   // Constructs an uninitialized vector.
   OZZ_INLINE Float3() {}
@@ -97,7 +107,12 @@ struct OZZ_BASE_DLL Float3 {
 
 // Declares a 4d float vector.
 struct OZZ_BASE_DLL Float4 {
-  float x, y, z, w;
+  union {
+    struct {
+      float x, y, z, w;
+    };
+    float values[4];
+  };
 
   // Constructs an uninitialized vector.
   OZZ_INLINE Float4() {}

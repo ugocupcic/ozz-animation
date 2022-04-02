@@ -40,32 +40,32 @@ namespace ozz {
 namespace io {
 void Extern<math::Float2>::Save(OArchive& _archive, const math::Float2* _values,
                                 size_t _count) {
-  _archive << MakeArray(&_values->x, 2 * _count);
+  _archive << MakeArray(_values->values, 2 * _count);
 }
 void Extern<math::Float2>::Load(IArchive& _archive, math::Float2* _values,
                                 size_t _count, uint32_t _version) {
   (void)_version;
-  _archive >> MakeArray(&_values->x, 2 * _count);
+  _archive >> MakeArray(_values->values, 2 * _count);
 }
 
 void Extern<math::Float3>::Save(OArchive& _archive, const math::Float3* _values,
                                 size_t _count) {
-  _archive << MakeArray(&_values->x, 3 * _count);
+  _archive << MakeArray(_values->values, 3 * _count);
 }
 void Extern<math::Float3>::Load(IArchive& _archive, math::Float3* _values,
                                 size_t _count, uint32_t _version) {
   (void)_version;
-  _archive >> MakeArray(&_values->x, 3 * _count);
+  _archive >> MakeArray(_values->values, 3 * _count);
 }
 
 void Extern<math::Float4>::Save(OArchive& _archive, const math::Float4* _values,
                                 size_t _count) {
-  _archive << MakeArray(&_values->x, 4 * _count);
+  _archive << MakeArray(_values->values, 4 * _count);
 }
 void Extern<math::Float4>::Load(IArchive& _archive, math::Float4* _values,
                                 size_t _count, uint32_t _version) {
   (void)_version;
-  _archive >> MakeArray(&_values->x, 4 * _count);
+  _archive >> MakeArray(_values->values, 4 * _count);
 }
 
 void Extern<math::Quaternion>::Save(OArchive& _archive,
